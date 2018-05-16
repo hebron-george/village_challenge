@@ -12,6 +12,15 @@ module VillageChallenge
       families
     end
 
+    def required_ratios(families)
+      {
+          ratio_boys_to_girls:  boys_to_girls(families),
+          avg_kids_per_family:  average_kids_per_family(families),
+          avg_boys_per_family:  average_boys_per_family(families),
+          avg_girls_per_family: average_girls_per_family(families),
+      }
+    end
+
     # Returns ratio of boys to girls
     # for a given array of families
     def boys_to_girls(families)

@@ -53,16 +53,11 @@ Load up `bin/console` and follow along:
 
 ```ruby
 families = VillageChallenge.simulate_families(100); # remove the semi-colon if you want to see the list of families
-
-# 1. Ratio of boys to girls
-VillageChallenge.boys_to_girls(families) # => 0.922077922077922
- 
-# 2. Average kids per family
-VillageChallenge.average_kids_per_family(families) # => 1.48
-
-# 3. Average boys per family
-VillageChallenge.average_boys_per_family(families) # => 0.71
- 
-# 4. Average girls per family 
-VillageChallenge.average_girls_per_family(families) # => 0.77
+VillageChallenge.required_ratios(families)
+# => {
+# :ratio_boys_to_girls  => 1.015372549019608, 
+# :avg_kids_per_family  => 1.2848, 
+# :avg_boys_per_family  => 0.6473, 
+# :avg_girls_per_family => 0.6375
+# }
 ```
